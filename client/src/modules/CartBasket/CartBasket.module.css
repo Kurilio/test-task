@@ -1,0 +1,47 @@
+.basket {
+  width: 40px;
+  height: 60%;
+  padding: 0 0 1em 1em;
+
+  position: fixed;
+  right: 0;
+  top: 20%;
+  z-index: 100;
+  background-color: #172a3b;
+
+  transition: width 0.5s;
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.countProduct {
+  background-color: rgb(240, 255, 245);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-top: 2em;
+  position: fixed;
+  text-align: center;
+  font-size: 22px;
+  color: #2832f7;
+}
+
+.basketInner {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.7s linear;
+}
+
+.basket:hover {
+  width: 12em;
+  overflow-y: auto;
+}
+
+.basket:hover .basketInner {
+  visibility: visible;
+  opacity: 1;
+}
+
+.basket:hover .countProduct {
+  opacity: 0;
+}
